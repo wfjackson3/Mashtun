@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  city_id: 1
+  brewery_id: 1
+
+two:
+  email: MyString
+  city_id: 1
+  brewery_id: 1

@@ -1,0 +1,29 @@
+<%= form_for(@alpha) do |f| %>
+  <% if @alpha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alpha.errors.count, "error") %> prohibited this alpha from being saved:</h2>
+
+      <ul>
+      <% @alpha.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :city_id %><br />
+    <%= f.text_field :city_id %>
+  </div>
+  <div class="field">
+    <%= f.label :brewery_id %><br />
+    <%= f.text_field :brewery_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
