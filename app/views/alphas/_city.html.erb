@@ -1,0 +1,8 @@
+<%= fields_for :city do |builder| %>
+<p>
+	<%= builder.label :name, "City" %>
+	<%= builder.text_field :name %><br />
+	<%= builder.label :state, "State" %>
+	<%= builder.text_field :state %>
+</p>
+<% end %>

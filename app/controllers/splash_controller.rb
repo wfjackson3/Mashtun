@@ -1,5 +1,5 @@
 class SplashController < ApplicationController
-  def index
+  def new
   end
 
 end

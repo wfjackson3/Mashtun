@@ -40,6 +40,7 @@ class CitiesController < ApplicationController
   # POST /cities
   # POST /cities.xml
   def create
+  	# raise params.inspect
     @city = City.new(params[:city])
 
     respond_to do |format|

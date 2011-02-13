@@ -25,6 +25,7 @@ class AlphasController < ApplicationController
   # GET /alphas/new.xml
   def new
     @alpha = Alpha.new
+    # @alpha.city.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,6 +41,8 @@ class AlphasController < ApplicationController
   # POST /alphas
   # POST /alphas.xml
   def create
+  	# raise params.inspect
+  	@city = City.new(params[:city])
     @alpha = Alpha.new(params[:alpha])
 
     respond_to do |format|
@@ -79,5 +82,10 @@ class AlphasController < ApplicationController
       format.html { redirect_to(alphas_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def ajaxcity
+  	City.new(params[:city])
+  	
   end
 end

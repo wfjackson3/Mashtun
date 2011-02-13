@@ -16,12 +16,14 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :city_id %><br />
-    <%= f.text_field :city_id %>
+    <%= f.label :city_id, "City" %><br />
+    <%= f.collection_select :city_id, City.all, :id, :full_name, :include_blank => true %>
+		<!-- put the call to the city partial here when it is working -->
+		<%= render :partial => 'city', :locals => {:builder => :city}%>
   </div>
   <div class="field">
-    <%= f.label :brewery_id %><br />
-    <%= f.text_field :brewery_id %>
+    <%= f.label :brewery_id, "Brewery" %><br />
+    <%= f.collection_select :brewery_id, Brewery.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
