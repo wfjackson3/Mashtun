@@ -42,8 +42,10 @@ class AlphasController < ApplicationController
   # POST /alphas.xml
   def create
   	# raise params.inspect
-  	@city = City.new(params[:city])
+  	@city = City.create(params[:city])
+  	
     @alpha = Alpha.new(params[:alpha])
+    @alpha.city = @city
 
     respond_to do |format|
       if @alpha.save
