@@ -25,7 +25,6 @@ class AlphasController < ApplicationController
   # GET /alphas/new.xml
   def new
     @alpha = Alpha.new
-    # @alpha.city.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,10 +41,14 @@ class AlphasController < ApplicationController
   # POST /alphas.xml
   def create
   	# raise params.inspect
-  	@city = City.create(params[:city])
+  	if !params[:city][:name].blank? then
+  		@city = City.create(params[:city])
+  		@alpha = Alpha.new(params[:alpha])
+  		@alpha.city = @city
+  	else
+			@alpha = Alpha.new(params[:alpha])
+  	end
   	
-    @alpha = Alpha.new(params[:alpha])
-    @alpha.city = @city
 
     respond_to do |format|
       if @alpha.save
