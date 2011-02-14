@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208183252) do
+ActiveRecord::Schema.define(:version => 20110214033144) do
 
   create_table "alphas", :force => true do |t|
     t.string   "email"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20110208183252) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "alphas", ["email"], :name => "index_alphas_on_email", :unique => true
 
   create_table "breweries", :force => true do |t|
     t.string   "name"

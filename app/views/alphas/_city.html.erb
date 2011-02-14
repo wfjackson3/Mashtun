@@ -1,10 +1,8 @@
 <%= fields_for :city do |builder| %>
-<p class="fields">
+<div class="newcity">
 	<%= builder.label :name, "City" %>
-	<%= builder.hidden_field :name %><br />
+	<%= builder.text_field :name %><br />
 	<%= builder.label :state, "State" %>
 	<%= builder.text_field :state %>
-	<%= link_to_function "new city", "show_fields(this)" %>
-	<%= link_to_function "hide state", "hide_fields(this)" %>
-</p>
+</div>
 <% end %>

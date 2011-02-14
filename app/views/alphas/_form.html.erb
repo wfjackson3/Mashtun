@@ -16,9 +16,11 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :city_id, "City" %><br />
-    <%= f.collection_select :city_id, City.all, :id, :full_name, :include_blank => true %>
-		<!-- put the call to the city partial here when it is working -->
+    <%= f.label :city_id, "City" %>
+    <%= link_to_function "new city", "toggle_fields('div.newcity')" %><br />
+    <div>
+    	<%= f.collection_select :city_id, City.all, :id, :full_name, :include_blank => true %>
+  	</div>
 		<%= render :partial => 'city', :locals => {:builder => :city}%>
   </div>
   <div class="field">
