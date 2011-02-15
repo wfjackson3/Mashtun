@@ -13,7 +13,7 @@ header img {
 }
 
 section {
-  margin-top: 40%;
+  margin-top: 30%;
   font-size: 120%;
   padding: 20px;
   background: #fff;
@@ -21,6 +21,11 @@ section {
 
 section h1 {
   font-size: 200%;
+  text-align: center;
+}
+
+.fineprint {
+	font-size: 80%
 }
 
 /* Links */

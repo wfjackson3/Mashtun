@@ -14,6 +14,9 @@
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
+    <p class="fineprint">
+    	We won't give your email address out to anyone and we will only email you about Mashtun.
+    </p>
   </div>
   <div class="field">
     <%= f.label :city_id, "City" %>
@@ -21,13 +24,23 @@
     <div>
     	<%= f.collection_select :city_id, City.all, :id, :full_name, :include_blank => true %>
   	</div>
-		<%= render :partial => 'city', :locals => {:builder => :city}%>
+		<%= render :partial => 'city', :locals => {:builder => :city} %>
+		<p class="fineprint">
+			We want to know what city you think we should use for our alpha launch. Vote for your city and tell your friends.
+		</p>
   </div>
   <div class="field">
-    <%= f.label :brewery_id, "Brewery" %><br />
-    <%= f.collection_select :brewery_id, Brewery.all, :id, :name %>
+    <%= f.label :brewery_id, "Brewery" %>
+    <%= link_to_function "new brewery", "toggle_fields('div.newbrewery')" %><br />
+    <div>
+	    <%= f.collection_select :brewery_id, Brewery.all, :id, :name, :include_blank => true %>
+    </div>
+    <%= render :partial => 'brewery', :locals => {:builder => :brewery} %>
+    <p class="fineprint">
+    	If there is a specific brewery that you really wish you had access to locally, let us know. We exist to get you the beer you want.
+  	</p>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

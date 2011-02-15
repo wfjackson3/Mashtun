@@ -8,4 +8,5 @@ function toggle_fields(link) {
 $(document).ready(function() {
  // hides the div as soon as the DOM is ready
   $('div.newcity').hide();
+  $('div.newbrewery').hide();
 });
