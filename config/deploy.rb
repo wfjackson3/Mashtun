@@ -11,9 +11,9 @@ set :use_sudo, "false"
 
 set :deploy_via, :remote_cache
 
-role :web, "mashtun.com"                          # Your HTTP server, Apache/etc
-role :app, "mashtun.com"                          # This may be the same as your `Web` server
-role :db,  "mashtun.com", :primary => true # This is where Rails migrations will run
+role :web, "mashtunbeer.com"                          # Your HTTP server, Apache/etc
+role :app, "mashtunbeer.com"                          # This may be the same as your `Web` server
+role :db,  "mashtunbeer.com", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
 # If you are using Passenger mod_rails uncomment this:
