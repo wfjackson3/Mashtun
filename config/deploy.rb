@@ -7,7 +7,7 @@ set :scm, :git
 set :deploy_to, "/var/www/mashtun"
 set :branch, "master"
 set :user, "root"
-set :use_sudo, "false"
+set :use_sudo, "true"
 
 set :deploy_via, :remote_cache
 
