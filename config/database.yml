@@ -16,9 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql
-  encoding: utf8
-  database: mashtun
-  username: mtuser
-  password: trjdfFwje426
-  socket: /var/run/mysqld/mysqld.sock
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
