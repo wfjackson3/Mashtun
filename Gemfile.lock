@@ -76,5 +76,5 @@ PLATFORMS
 DEPENDENCIES
   annotate-models
   jquery-rails
-  rails (= 3.0.1)
+  rails
   sqlite3-ruby
