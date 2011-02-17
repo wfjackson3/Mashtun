@@ -6,8 +6,8 @@ class City < ActiveRecord::Base
 	
 	validates :name,	:presence	=>	true
 										
-	validates :state,	:presence	=>	true
-										# :length		=>	2
+	validates :state,	:presence	=>	true,
+										:length		=>	{:maximum => 2}
 	
 	def full_name
 		"#{name}, #{state}"
