@@ -39,8 +39,9 @@ module Mashtun
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-    config.logger = Logger.new(STDOUT)
-    config.log_level = :info
+    # Uncomment to turn on verbose logging.
+    # config.logger = Logger.new(STDOUT)
+    # config.log_level = :info
     
     config.generators do | g |
       g.test_framework :rspec
