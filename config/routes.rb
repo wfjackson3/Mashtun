@@ -1,14 +1,4 @@
 Mashtun::Application.routes.draw do
-  resources :breweries
-
-  resources :cities
-
-  resources :alphas
-
-  get "alphas/new"
-
-  # match '/landing',   :to => 'pages#landing' 
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -58,7 +48,7 @@ Mashtun::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "alphas#new"
+  # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 
