@@ -41,5 +41,9 @@ module Mashtun
     
     config.logger = Logger.new(STDOUT)
     config.log_level = :info
+    
+    config.generators do | g |
+      g.test_framework :rspec
+    end    
   end
 end
